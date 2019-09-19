@@ -60,10 +60,10 @@ public class FireAndIce {
     }
 
     private void printTable(HashMap<String, boolean[]> characterMap, ArrayList<Book> books) {
-        String separator = new String(new char[132]).replace("\0", "-");
+        String separator = new String(new char[125]).replace("\0", "-");
         System.out.println(separator);
         ArrayList<Character> characters = new ArrayList<Character>();
-        String result = "|" + padRight("Name", 25, ' ');
+        String result = "|" + padRight("Name", 18, ' ');
         for (int i = 0; i < books.size(); i++) {
            if (i == books.size() -1) {
                result += "|" + padRight(books.get(i).getName(), 20, ' ') + "|";
@@ -76,7 +76,7 @@ public class FireAndIce {
         for (String key : characterMap.keySet()) {
             Character c = getSimpleCharacter(key, characterMap.get(key));
             StringBuilder sb = new StringBuilder();
-            sb.append("|" + padRight(c.getName(), 25, ' '));
+            sb.append("|" + padRight(c.getName(), 18, ' '));
 
             for (int i = 0; i < c.getPovBooks().length; i++) {
                 if (c.getPovBooks()[i]) {
