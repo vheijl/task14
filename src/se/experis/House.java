@@ -14,7 +14,7 @@ public class House {
     public String displayHouseMembers() {
         String result = "";
         for (int i = 0; i < members.size(); i++) {
-            result += "\t" + members.get(i).name + "\n";
+            result += "\t" + members.get(i).getName() + "\n";
         }
         return result;
     }
